@@ -196,6 +196,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ### ► Author & Contact
 
 -   **Abhay Kumar Saini**
--   **GitHub:** [githubabhay2003](https://github.com/githubabhay2003)
--   **LinkedIn:** [Abhay Kumar Saini](https://www.linkedin.com/in/abhay-kumar-saini-571891264/)
+-   **GitHub:** <a href="https://github.com/githubabhay2003" target="_blank">githubabhay2003</a>
+-   **LinkedIn:** <a href="https://www.linkedin.com/in/abhay-kumar-saini-571891264/" target="_blank">Abhay Kumar Saini</a>
 
