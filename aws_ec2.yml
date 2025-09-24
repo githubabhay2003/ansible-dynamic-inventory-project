@@ -1,0 +1,9 @@
+---
+plugin: aws_ec2
+regions:
+  - ap-south-1 # NOTE: This is the Mumbai region.
+keyed_groups:
+  - key: tags.Role
+    prefix: role
+compose:
+  ansible_host: private_ip_address

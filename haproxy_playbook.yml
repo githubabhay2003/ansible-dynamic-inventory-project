@@ -1,0 +1,22 @@
+---
+- name: Configure HAProxy Load Balancer
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+    - name: Generate HAProxy configuration file from template
+      ansible.builtin.template:
+        src: haproxy.cfg.j2
+        dest: /etc/haproxy/haproxy.cfg
+        owner: haproxy
+        group: haproxy
+        mode: '0644'
+      notify:
+        - Reload HAProxy
+
+  handlers:
+    - name: Reload HAProxy
+      ansible.builtin.service:
+        name: haproxy
+        state: reloaded

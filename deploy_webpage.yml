@@ -1,0 +1,19 @@
+---
+- name: Deploy custom web page to web servers
+  hosts: role_WebServer
+  become: yes
+
+  tasks:
+    - name: Ensure apache2 is installed
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Create custom index.html from template
+      ansible.builtin.template:
+        src: index.html.j2
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
